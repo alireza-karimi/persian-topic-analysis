@@ -65,7 +65,7 @@ class SVMModel:
   return self.encoder.inverse_transform(prediction)[0]
 
 if __name__ == "__main__":
- file_address = 'khabarfarsi_clf_dataset.csv'
+ file_address = 'dataset.csv'
  data = pd.read_csv(file_address, error_bad_lines = False, sep = ";")
  data.columns = ['y', 'x']
  model = SVMModel(data)
