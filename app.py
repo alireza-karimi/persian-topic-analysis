@@ -20,7 +20,7 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
 #creating svm model object
-file_address = 'khabarfarsi_clf_dataset.csv'
+file_address = 'dataset.csv'
 data = pd.read_csv(file_address, error_bad_lines = False, sep = ";")
 data.columns = ['y', 'x']
 svm_predictor = SVMModel(data=data)
